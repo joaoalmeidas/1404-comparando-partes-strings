@@ -14,17 +14,13 @@ public class ComparandoStrings {
 		System.out.println("Insira outra frase:");
 		s2 = input.nextLine();
 		
-		if(s1.length() > s2.length()) {
+		if(s1.regionMatches(true, 0, s2, 0, s2.length())) {
 			
-			System.out.printf("\"%s\" tem mais caracteres que \"%s\"%n", s1, s2);
+			System.out.print("As duas strings são iguais, ignorando caracteres com caixa alta.");
 			
-		}else if(s1.length() < s2.length()) {
+		}else {
 			
-			System.out.printf("\"%s\" tem menos caracteres que \"%s\"%n", s1, s2);
-			
-		}else if(s1.length() == s2.length()) {
-			
-			System.out.printf("\"%s\" tem o mesmo numero de caracteres que \"%s\"%n", s1, s2);
+			System.out.print("As duas strings são diferentes.");
 			
 		}
 
